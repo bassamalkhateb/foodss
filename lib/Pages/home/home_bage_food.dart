@@ -21,17 +21,26 @@ class _HomeBageFoodState extends State<HomeBageFood> {
         children: [
           Container(
             child: Container(
-              margin: EdgeInsets.only(top: Dimensions.Height45,bottom: Dimensions.Height15),
-              padding: EdgeInsets.only(right: Dimensions.Width20, left: Dimensions.Width20),
+              margin: EdgeInsets.only(
+                  top: Dimensions.Height45, bottom: Dimensions.Height15),
+              padding: EdgeInsets.only(
+                  right: Dimensions.Width20, left: Dimensions.Width20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: [
-                      BigText(text: 'Syria', color: AppColors.mainColor,size: 20,),
+                      BigText(
+                        text: 'Syria',
+                        color: AppColors.mainColor,
+                        size: 20,
+                      ),
                       Row(
                         children: [
-                          SmallText(text: 'Homs',size: 12,),
+                          SmallText(
+                            text: 'Homs',
+                            size: 12,
+                          ),
                           Icon(Icons.arrow_drop_down_rounded),
                         ],
                       ),
@@ -40,20 +49,16 @@ class _HomeBageFoodState extends State<HomeBageFood> {
                   Container(
                     width: Dimensions.Width45,
                     height: Dimensions.Height45,
-                    child: Icon(
-                      Icons.search_rounded,
-                      color: Colors.white,
-                      size:Dimensions.icon15 ,
-
-                    ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(Dimensions.radius15),
                       color: AppColors.mainColor,
-
-
+                    ),
+                    child: Icon(
+                      Icons.search_rounded,
+                      color: Colors.white,
+                      size: Dimensions.icon15,
                     ),
                   ),
-
                 ],
               ),
             ),
