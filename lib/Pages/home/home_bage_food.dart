@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:food/Widgets/Big_text.dart';
 import 'package:food/Widgets/small_text.dart';
+import 'package:food/controllers/popular_prodcut_controller.dart';
 import 'package:food/utiles/colors.dart';
 import 'package:food/utiles/dimensioms.dart';
+import 'package:get/get.dart';
 
 import 'food_page_body.dart';
 
@@ -53,10 +55,16 @@ class _HomeBageFoodState extends State<HomeBageFood> {
                       borderRadius: BorderRadius.circular(Dimensions.radius15),
                       color: AppColors.mainColor,
                     ),
-                    child: Icon(
-                      Icons.search_rounded,
-                      color: Colors.white,
-                      size: Dimensions.icon15,
+                    child: InkWell(
+                      onTap: () {
+                        Get.find<PopularProductController>()
+                            .getPopularProductList();
+                      },
+                      child: Icon(
+                        Icons.search_rounded,
+                        color: Colors.white,
+                        size: Dimensions.icon15,
+                      ),
                     ),
                   ),
                 ],
