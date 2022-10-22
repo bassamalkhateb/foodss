@@ -20,7 +20,8 @@ class ApiClient extends GetConnect implements GetxService {
   ) async {
     try {
       print(appBaseUrl + uri);
-      var url = Uri.https('mvs.bslmeiyu.com', '/api/v1/products/popular');
+      var url = Uri.http('mvs.bslmeiyu.com', '/api/v1/products/popular');
+      print(url.toString());
       http.Response response = await http.get(url);
       print(response.body);
       return response;
